@@ -10,6 +10,9 @@
       <h2>Not React</h2>
       <webview src="about:blank" partition="not-react"></webview>
     </div>
+    <div id="almost-react">
+      <h2>Almost React</h2>
+    </div>
 
     <script>
 
@@ -25,6 +28,12 @@
       React.createElement(WebviewUser),
       document.getElementById('react')
     );
+
+    const container = document.getElementById('almost-react')
+    const wv = document.createElement('webview')
+    wv.src = 'about:blank'
+    wv.partition = 'almost-react'
+    container.appendChild(wv)
 
     setTimeout(function () {
       const webviews = document.querySelectorAll('webview')
